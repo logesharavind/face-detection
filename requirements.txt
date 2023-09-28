@@ -1,7 +1,7 @@
 Flask
 Flask-SocketIO
 Pillow
-opencv-python-headless==4.5.3
+opencv-python-headless
 numpy
 imutils
 gunicorn
