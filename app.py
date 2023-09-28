@@ -34,6 +34,8 @@ mp_drawing = mp.solutions.drawing_utils
 
 @socketio.on('image')
 def image(data_image):
+    import cv2
+    
     frame = readb64(data_image)
 
     # Draw a vertical blue line on the frame
