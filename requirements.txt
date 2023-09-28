@@ -1,0 +1,9 @@
+Flask
+Flask-SocketIO
+Pillow
+opencv-python-headless
+numpy
+imutils
+gunicorn
+eventlet
+mediapipe
