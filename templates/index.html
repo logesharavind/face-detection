@@ -20,11 +20,11 @@
 
     <div id="container">
         <video autoplay playsinline id="videoElement"></video>
-        <canvas id="canvas" width="400" height="300"></canvas>
+        <canvas id="canvas" width="700" height="800"></canvas>
     </div>
 
     <div class="video">
-        <img id="photo" width="800" height="600">
+        <img id="photo" width="700" height="800">
         <h1>video</h1>
     </div>
 
@@ -39,8 +39,8 @@
         var context = canvas.getContext('2d');
         const video = document.querySelector("#videoElement");
 
-        video.width = 400;
-        video.height = 300; 
+        video.width = 300;
+        video.height = 400; 
 
         if (navigator.mediaDevices.getUserMedia) {
             navigator.mediaDevices.getUserMedia({ video: true })
