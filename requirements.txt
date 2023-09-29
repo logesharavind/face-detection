@@ -6,3 +6,4 @@ numpy
 imutils
 gunicorn
 eventlet
+mediapipe

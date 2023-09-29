@@ -7,6 +7,7 @@ import base64
 import cv2
 import numpy as np
 import imutils
+import mediapipe as mp
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key_here'
