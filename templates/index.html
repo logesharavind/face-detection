@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Face Detection</title>
+    <title>Title</title>
+
     <style>
         #video {
             transform: rotateY(180deg);
@@ -10,22 +11,26 @@
             -moz-transform: rotateY(180deg); /* Firefox */
         }
     </style>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
 </head>
+
 <body>
-    <h1>Face Detection</h1>
+
     <div id="container">
         <video autoplay playsinline id="videoElement"></video>
         <canvas id="canvas" width="400" height="300"></canvas>
     </div>
+
     <div class="video">
-        <img id="processedImage" width="400" height="300">
-        <h1>Processed Video</h1>
+        <img id="photo" width="800" height="600">
+        <h1>video</h1>
     </div>
 
     <script type="text/javascript">
         var socket = io();
+
         socket.on('connect', function(){
             console.log("Connected...!", socket.connected)
         });
@@ -60,13 +65,8 @@
         }, 1000/FPS);
 
         socket.on('response_back', function(image){
-            // Log the received image data
-            console.log(image);
-
-            // Set the src attribute of the processedImage element
-            document.getElementById('processedImage').setAttribute('src', image);
+            document.getElementById('photo').setAttribute('src', image);
         });
-
     </script>
 </body>
 </html>
